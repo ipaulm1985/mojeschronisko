@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Pies</th>
+        <th>Badania</th>
+        <th>Data_badania</th>
+    </tr>
+    {% for pies_badania in data %}
+    <tr>
+        <td> {{ pies_badania.pies }} </td>
+        <td> {{ pies_badania.badania }} </td>
+        <td> {{ pies_badania.data_badania }} </td>
+<!--        #pole po kropce musi być takie samo jak w models.py-->
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

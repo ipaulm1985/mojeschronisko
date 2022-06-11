@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Nazwa</th>
+    </tr>
+    {% for lokalizacja in data %}
+    <tr>
+        <td> {{ lokalizacja.nazwa }} </td>
+<!--        #pole po kropce musi być takie samo jak w models.py-->
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

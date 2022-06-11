@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Nazwa</th>
+        <th>Rasa</th>
+        <th>Plec</th>
+        <th>Wiek</th>
+    </tr>
+    {% for pies in data %}
+    <tr>
+        <td> {{ pies.nazwa }} </td>
+        <td> {{ pies.rasa }} </td>
+        <td> {{ pies.plec }} </td>
+        <td> {{ pies.wiek }} </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
