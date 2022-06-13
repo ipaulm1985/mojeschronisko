@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from rejestr.views.start import HomePageView
+from rejestr.views.start import SearchResultsView
+
 from rejestr.views.pies import PiesCreateView
 from rejestr.views.pies import PiesReadView
 from rejestr.views.pies import PiesSelectUpdateView
@@ -61,6 +64,10 @@ from rejestr.views.lokalizacja import LokalizacjaDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('', HomePageView.as_view(), name="start"),
+    path('search/', SearchResultsView.as_view(), name="search_results"),
+
     path('pies/create', PiesCreateView.as_view()),
     path('pies/read', PiesReadView.as_view(), name="pies"),
     path('pies/update', PiesSelectUpdateView.as_view()),
